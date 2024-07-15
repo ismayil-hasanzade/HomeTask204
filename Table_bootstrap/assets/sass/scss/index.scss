@@ -1,0 +1,52 @@
+// variables & functions
+@import "variables";
+@import "functions";
+
+// base && layout
+@import "base";
+
+@import "breakpoints";
+@import "grid";
+
+// colors
+@import "colors";
+
+// components (button, card, etc.)
+@import "components/card";
+@import "components/button";
+@import "components/navbar";
+// utilities (margin, padding, etc.)
+@import "utilities";
+
+button {
+  background-color: $primary-color;
+  color: white;
+  border: 0;
+  border-radius: $base-border-radius;
+  padding: $base-padding;
+}
+.table {
+  width: 100%;
+
+  
+}
+
+.error {
+  color: $error-color;
+  border-color: $error-color;
+  border-style: solid;
+  margin: $base-margin;
+  padding: $base-padding;
+  border-radius: $base-border-radius;
+  border-width: $base-border-thickness;
+}
+
+.notification {
+  color: $warning-color;
+  border-color: $warning-color;
+  border-style: solid;
+  margin: $base-margin;
+  padding: $base-padding;
+  border-radius: $base-border-radius;
+  border-width: $base-border-thickness;
+}

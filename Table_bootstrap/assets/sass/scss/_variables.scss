@@ -1,0 +1,56 @@
+@use "sass:map";
+
+// theme colors
+$primary-color: #326dee;
+$secondary-color: #1ac886;
+$error-color: #d32752;
+$warning-color: #f6c31c;
+
+// colors
+$colors: (
+  "primary": #CFE1FE,
+  "secondary": #CFE1FE,
+  "success":#D1E6DD,
+  "danger" :#F5C6CA,
+  "warning": #FFF2CD,
+  "info": #CEF4FC,
+  "light": #fff,
+  "dark": #000,
+);
+
+ 
+
+// spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+
+//box-shadow
+$base-box-shadow: 1px 3px 5px (0, 0, 0, 0.1);
+
+// font-size
+$base-font-size: 1rem;
+
+$font-size-sm: $base-font-size * 0.75;
+$font-size-md: $base-font-size * 1.25;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;
+
+// .btn-save {
+//   background-color: map-get($map: $colors, $key: "red");
+// }
+
+// @debug map-get($map: $colors, $key: "red");
+// @debug map-has-key($map: $colors, $key: "red");
+// @debug map-remove($map: $colors, $key: "white");
+
+// @debug map-merge(
+//   $map1: $colors,
+//   $map2: (
+//     "pink": #ffc0cb,
+//   )
+// );

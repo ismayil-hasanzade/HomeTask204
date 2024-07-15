@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  max-width: 1370px;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  height: 100vh;
+  justify-content: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.container form {
+  position: relative;
+  display: flex;
+  border: 3px solid black;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 15px;
+  justify-content: center;
+  gap: 20px;
+}
+.container form span {
+  position: absolute;
+  top: -12px;
+  background-color: white;
+  font-size: 18px;
+}
+.container form .inputbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container form .inputbox label {
+  width: 80px;
+  text-align: right;
+}
+.container form .inputbox input {
+  width: 80%;
+  height: 40px;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+.container form .buttonbox {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.container form .buttonbox button {
+  color: white;
+  border: 2px solid black;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: self-end;
+}
+.container form .buttonbox .cancelbutton {
+  background-color: red;
+  display: none;
+}
+.container form .buttonbox .updatebutton {
+  background-color: orange;
+  color: black;
+  display: none;
+}
+.container form .buttonbox .savebutton {
+  background-color: green;
+}
+.container table {
+  border-spacing: 0;
+  width: 60%;
+  border: 1px solid black;
+}
+.container table thead tr {
+  background-color: #cccccc;
+}
+.container table thead tr td {
+  height: 20px;
+}
+.container table tbody tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+.container table tr {
+  border-right: 1px solid black;
+}
+.container table tr td {
+  height: 50px;
+  border-right: 1px solid black;
+}
+
+@media (max-width: 468px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .container form {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

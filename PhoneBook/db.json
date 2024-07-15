@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "name": "Ismayil",
+      "surname": "Hasanzade",
+      "number": "+994 (05) 075 02-53",
+      "mail": "dismayil.hesenzade.98@mail.ru",
+      "id": "7afd"
+    },
+    {
+      "name": "Ismayil",
+      "surname": "Hasanzade",
+      "number": "+994 (05) 075 02-53",
+      "mail": "ismayil.hesenzade.98@mail.ru",
+      "id": "8f22"
+    },
+    {
+      "id": "29c2",
+      "name": "Ismayıl",
+      "surname": "Həsənzadə",
+      "number": "+994 (05) 065 32-42",
+      "mail": "pratikdersler2002@gmail.com"
+    }
+  ]
+}

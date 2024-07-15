@@ -1,0 +1,94 @@
+@use "sass:math";
+$grid-columns: 12;
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+//coll classes
+// @include xs {
+//   @for $i from 1 through $grid-columns {
+//     .col-xs-#{$i} {
+//       box-sizing: border-box;
+//       flex-grow: 0;
+//       width: math.div($i * 100%, $grid-columns);
+//     }
+//   }
+// }
+// @include sm {
+//   @for $i from 1 through $grid-columns {
+//     .col-sm-#{$i} {
+//       box-sizing: border-box;
+//       flex-grow: 0;
+//       width: math.div($i * 100%, $grid-columns);
+//     }
+//   }
+// }
+
+//utilites olar
+$grid-gaps: (
+  "0": 0,
+  "1": 5px,
+  "2": 10px,
+  "3": 20px,
+);
+$layout-values: flex-start, flex-end, center, space-between, space-around;
+
+//grid  gap classes
+@each $key, $value in $grid-gaps {
+  .gap-#{$key} > * {
+    padding: $value;
+  }
+  .gap-#{$key} {
+    margin-left: -$value;
+    margin-right: -$value;
+  }
+}
+@each $value in $layout-values {
+  .justify-#{$value} {
+    justify-content: $value;
+  }
+}
+
+//Mixin for colums styles
+@mixin col-styles($i) {
+  box-sizing: border-box;
+  flex-grow: 0;
+  width: math.div($i * 100%, $grid-columns);
+}
+//Mixin to create column classes
+@mixin create-column($breakpoint) {
+  @for $i from 1 through $grid-columns {
+    .col-#{$breakpoint}-#{$i} {
+      @include col-styles($i);
+    }
+  }
+}
+
+//imcluding mixiins with media queries
+@include xs {
+  @include create-column("xs");
+}
+@include sm {
+  @include create-column("sm");
+}
+@include md {
+  @include create-column("md");
+}
+@include lg {
+  @include create-column("lg");
+}
+@include xl {
+  @include create-column("xl");
+}

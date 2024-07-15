@@ -1,0 +1,96 @@
+// 1. Kullanım Örneği
+// @each $key, $value in $colors {
+
+//   .btn-#{$key} {
+//     text-decoration: none;
+//     cursor: pointer;
+//     display: inline-block;
+//     border: 0;
+//     padding: $base-padding $base-padding * 2;
+//     border-radius: $base-border-radius;
+//     background-color: $value;
+//     color: white;
+//   }
+
+//   .btn-outline-#{$key} {
+//     text-decoration: none;
+//     cursor: pointer;
+//     display: inline-block;
+//     border: 0;
+//     padding: $base-padding $base-padding * 2;
+//     border-radius: $base-border-radius;
+//     background-color: #fff;
+//     border: $base-border-thickness solid $value;
+//     color: $value;
+//   }
+
+// }
+
+// 2. Kullanım Örneği
+// @mixin btn {
+//   text-decoration: none;
+//   cursor: pointer;
+//   display: inline-block;
+//   border: 0;
+//   padding: $base-padding $base-padding * 2;
+//   border-radius: $base-border-radius;
+// }
+
+// @each $key, $value in $colors {
+//   .btn-#{$key} {
+//     @include btn;
+//     background-color: $value;
+//     color: white;
+//   }
+
+//   .btn-outline-#{$key} {
+//     @include btn;
+//     background-color: #fff;
+//     border: $base-border-thickness solid $value;
+//   }
+// }
+
+// 3. Kullanım Örneği
+
+@mixin btn($bg-color: #e2e2e2) {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: $base-padding $base-padding * 2;
+  border-radius: $base-border-radius;
+  background-color: $bg-color;
+}
+
+.btn {
+  @include btn; // class="btn btn-"
+}
+
+@each $key, $value in $colors {
+  .btn-#{$key} {
+    @include btn($value);
+
+    &:hover {
+      background-color: lighten($color: $value, $amount: 5);
+    }
+  }
+
+  .btn-outline-#{$key} {
+    @include btn(#fff);
+    color: $value;
+    border: $base-border-thickness solid $value;
+    &:hover {
+      background-color: $value;
+      color: white;
+    }
+  }
+
+  .btn-complement-#{$key} {
+    @include btn($value);
+    color: light-component($value);
+    &:hover {
+      background-color: light-component($value);
+      color: $value;
+    }
+  }
+}

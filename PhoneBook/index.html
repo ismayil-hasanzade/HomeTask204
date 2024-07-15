@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Book</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    
+  </head>
+  <body>
+    <div class="container">
+      <form action="#">
+        <span>Kayıt Ekleme</span>
+        <div class="inputbox">
+          <label for="name">Adı</label>
+          <input required type="text" id="name" name="name" />
+        </div>
+        <div class="inputbox">
+          <label for="surname">Soyadı</label>
+          <input required type="text" id="surname" name="surname" />
+        </div>
+        <div class="inputbox">
+          <label for="number">Telefon</label>
+          <input
+            required
+            data-maska="+994 (##) ### ##-##"
+            id="number"
+            name="number"
+          />
+        </div>
+        <div class="inputbox">
+          <label for="email">Email</label>
+          <input required type="email" id="email" name="email" />
+        </div>
+
+        <div class="buttonbox">
+          <button class="cancelbutton">İptal</button>
+          <button class="updatebutton">Güncelle</button>
+          <button type="submit" class="savebutton">Kaydet</button>
+        </div>
+      </form>
+      <table>
+       
+      
+      </table>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/maska@3.0.0-beta4/dist/cdn/maska.js"></script>
+  <script src="/script.js"></script>
+</html>
