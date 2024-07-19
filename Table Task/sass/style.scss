@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  
+  flex-direction: column;
+  gap: 20px;
+}
+.container {
+  table {
+    border-spacing: 0;
+    
+    border: 1px solid black;
+    thead {
+      tr {
+        background-color: #cccccc;
+        td {
+          height: 20px;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(odd) {
+          background-color: #eeeeee;
+        }
+      }
+    }
+    tr {
+      border-right: 1px solid black;
+
+      td {
+
+        height: 50px;
+
+        border-right: 1px solid black;
+      }
+    }
+  }
+  #search-input {
+    width: 30%;
+    
+  }
+  
+}
