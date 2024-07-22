@@ -34,4 +34,27 @@
 }
 .container #search-input {
   width: 30%;
+}
+.container #pagination-controls {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.container #pagination-controls #pagination-info {
+  border: 1px solid black;
+  padding: 10px;
+}
+.container #pagination-controls button {
+  border: none;
+  width: 100px;
+  height: 40px;
+  color: white;
+  border-radius: 10px;
+}
+.container #pagination-controls button:last-child {
+  background-color: green;
+}
+.container #pagination-controls button:first-child {
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */

@@ -28,7 +28,6 @@ class User extends Person {
 
 const url = "http://localhost:3000/users";
 
-
 let users = [];
 let columns = [
   "name",
@@ -61,7 +60,6 @@ const searchInput = document.getElementById("search-input");
       item.job
     );
     users.push(user);
-    
   });
   pageCount = Math.ceil(users.length / 10);
   document.getElementById("page-count").innerText = pageCount;
@@ -82,9 +80,9 @@ function renderUsersTable() {
   pageCount = Math.ceil(data.length / 10);
   document.getElementById("page-count").innerText = pageCount;
   if (pageCount <= 1) {
-    nextButton.setAttribute("disabled", "disabled");
+    nextButton.style.visibility = "hidden";
   } else {
-    nextButton.removeAttribute("disabled");
+    nextButton.style.visibility = "visible";
   }
   data.slice(10 * (currentPage - 1), 10 * currentPage).map((item) => {
     const tr = document.createElement("tr");
@@ -118,12 +116,12 @@ nextButton.addEventListener("click", () => {
   }
   currentPage++;
   if (currentPage > 1) {
-    previousButton.removeAttribute("disabled");
+    previousButton.style.visibility = "visible";
   }
   document.getElementById("current-page").innerText = currentPage;
   renderUsersTable();
   if (currentPage == pageCount) {
-    nextButton.setAttribute("disabled", "disabled");
+    nextButton.style.visibility = "hidden";
   }
 });
 
@@ -133,11 +131,11 @@ previousButton.addEventListener("click", () => {
   }
   currentPage--;
   if (currentPage < pageCount) {
-    nextButton.removeAttribute("disabled");
+    nextButton.style.visibility = "visible";
   }
   document.getElementById("current-page").innerText = currentPage;
   renderUsersTable();
   if (currentPage == 1) {
-    previousButton.setAttribute("disabled", "disabled");
+    previousButton.style.visibility = "hidden";
   }
 });

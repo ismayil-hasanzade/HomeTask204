@@ -10,17 +10,22 @@
   <body>
     <div class="container">
       <form action="#">
-        <span>Kayıt Ekleme</span>
+        <span>Add Users</span>
         <div class="inputbox">
-          <label for="name">Adı</label>
+          <label for="name">Name</label>
           <input required type="text" id="name" name="name" />
         </div>
         <div class="inputbox">
-          <label for="surname">Soyadı</label>
-          <input required type="text" id="surname" name="surname" />
+          <label for="address">Adress</label>
+          <input required type="text" id="address" name="address" />
         </div>
         <div class="inputbox">
-          <label for="number">Telefon</label>
+          <label for="email">Email</label>
+          <input required type="email" id="email" name="email" />
+        </div>
+        
+        <div class="inputbox">
+          <label for="number">Phone</label>
           <input
             required
             data-maska="+994 (##) ### ##-##"
@@ -29,20 +34,27 @@
           />
         </div>
         <div class="inputbox">
-          <label for="email">Email</label>
-          <input required type="email" id="email" name="email" />
+          <label for="job">Job</label>
+          <input required type="text" id="job" name="job" />
         </div>
+        <div class="inputbox">
+          <label for="company">Company</label>
+          <input required type="text" id="company" name="company" />
+        </div>
+        <div class="inputbox">
+          <label for="birthdate">Birthdate</label>
+          <input required  data-maska="#### - ##-##" id="birthdate" name="birthdate" />
+        </div>
+
+
 
         <div class="buttonbox">
           <button class="cancelbutton">İptal</button>
           <button class="updatebutton">Güncelle</button>
-          <button type="submit" class="savebutton">Kaydet</button>
+          <button type="submit" class="savebutton">Save</button>
         </div>
       </form>
-      <table>
-       
-      
-      </table>
+     
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/maska@3.0.0-beta4/dist/cdn/maska.js"></script>

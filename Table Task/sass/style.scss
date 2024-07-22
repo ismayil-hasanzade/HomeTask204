@@ -7,14 +7,14 @@
   width: 100%;
   display: flex;
   padding: 20px;
-  
+
   flex-direction: column;
   gap: 20px;
 }
 .container {
   table {
     border-spacing: 0;
-    
+
     border: 1px solid black;
     thead {
       tr {
@@ -36,7 +36,6 @@
       border-right: 1px solid black;
 
       td {
-
         height: 50px;
 
         border-right: 1px solid black;
@@ -45,7 +44,29 @@
   }
   #search-input {
     width: 30%;
-    
   }
-  
+  #pagination-controls {
+    display: flex;
+    
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    #pagination-info{
+      border: 1px solid black;
+      padding: 10px;
+    }
+    button {
+      border: none;
+      width: 100px;height: 40px;
+      color: white;
+      border-radius: 10px;
+      &:last-child {
+        background-color: green;
+      }
+      &:first-child{
+        background-color: red;
+        
+      }
+    }
+  }
 }
