@@ -1,8 +1,7 @@
 import axios from "axios";
-import React, { useState } from "react";
 
 const Form = ({ formData, setFormData }) => {
-  const URL: string = "http://localhost:3000/students";
+  const URL: string = "https://northwind.vercel.app/api/customers";
   const PostData = async (params: object) => {
     try {
       const res = await axios.post(URL, params);
@@ -46,7 +45,7 @@ const Form = ({ formData, setFormData }) => {
 
   return (
     <>
-      <form onSubmit={formData?.id ? handleUpdate :  handleSubmit}>
+      <form onSubmit={formData?.id ? handleUpdate : handleSubmit}>
         <input
           required
           type="text"
