@@ -1,0 +1,32 @@
+#boxcontainer {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+#boxcontainer .ant-card {
+  padding: 0;
+}
+#boxcontainer .ant-card .ant-card-cover {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+#boxcontainer .ant-card .ant-card-cover img {
+  width: 50%;
+}
+#boxcontainer .ant-card .ant-card-body {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#boxcontainer .ant-card .fa-heart {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}/*# sourceMappingURL=style.css.map */

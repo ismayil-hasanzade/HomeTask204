@@ -1,0 +1,33 @@
+#boxcontainer {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+
+  .ant-card {
+    padding: 0;
+    .ant-card-cover {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      img {
+        width: 50%;
+      }
+    }
+    .ant-card-body {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .fa-heart {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
+  }
+}
