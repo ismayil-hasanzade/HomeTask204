@@ -11,7 +11,7 @@ export const FavoritesProvider = ({ children }) => {
 
   const addFavorite = (favorite) => {
     setFavorites([...favorites, favorite]);
-  };
+  }
 
   const removeFavorite = (id) => {
     setFavorites(favorites.filter((fav) => fav.id !== id));

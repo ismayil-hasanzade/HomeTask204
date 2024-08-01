@@ -1,7 +1,7 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Card, Spin } from "antd";
-import { useFavorites } from "../FavoritesProvaider";
+import { FavoritesContext } from "../FavoritesProvaider";
 
 const { Meta } = Card;
 
@@ -38,12 +38,11 @@ const Product: React.FC = () => {
     getData();
   }, []);
 
-  const { favorites, toggleFavorite } = useFavorites();
+  const { favorites, toggleFavorite } = useContext(FavoritesContext);
 
   const isFavorite = (item: DataType): boolean => {
     return favorites.some((favorite) => favorite.id === item.id);
   };
-  useEffect(() => {}, [toggleFavorite]);
 
   return (
     <div id="boxcontainer">

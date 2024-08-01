@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, { createContext, useState, ReactNode } from "react";
 
 interface DataType {
   id: number;
@@ -18,17 +18,13 @@ interface FavoritesContextType {
   toggleFavorite: (item: DataType) => void;
 }
 
-const FavoritesContext = createContext<FavoritesContextType | undefined>(undefined);
+export const FavoritesContext = createContext<FavoritesContextType | undefined>(
+  undefined
+);
 
-export const useFavorites = (): FavoritesContextType => {
-  const context = useContext(FavoritesContext);
-  if (!context) {
-    throw new Error("useFavorites must be used within a FavoritesProvider");
-  }
-  return context;
-};
-
-export const FavoritesProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const FavoritesProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
   const [favorites, setFavorites] = useState<DataType[]>(() => {
     const savedFavorites = localStorage.getItem("favorites");
     return savedFavorites ? JSON.parse(savedFavorites) : [];
@@ -38,7 +34,9 @@ export const FavoritesProvider: React.FC<{ children: ReactNode }> = ({ children 
     setFavorites((prevFavorites) => {
       let newFavorites;
       if (prevFavorites.some((favorite) => favorite.id === item.id)) {
-        newFavorites = prevFavorites.filter((favorite) => favorite.id !== item.id);
+        newFavorites = prevFavorites.filter(
+          (favorite) => favorite.id !== item.id
+        );
       } else {
         newFavorites = [...prevFavorites, item];
       }

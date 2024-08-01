@@ -1,23 +1,14 @@
 import { Card } from "antd";
 import Meta from "antd/es/card/Meta";
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { FavoritesContext } from "../FavoritesProvaider";
 
 const Favorites: React.FC = () => {
-  const [favoritesdata, setFavoritesData] = useState<any[]>(
-    JSON.parse(localStorage.getItem("favorites") || "[]")
-  );
-
-  const setRemoveItem = (item: any) => {
-    const updatedFavorites = favoritesdata.filter(
-      (favorite) => favorite.id !== item.id
-    );
-    setFavoritesData(updatedFavorites);
-    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-  };
+  const { favorites, toggleFavorite } = useContext(FavoritesContext);
 
   return (
     <div id="boxcontainer">
-      {favoritesdata.map((item) => (
+      {favorites.map((item) => (
         <Card
           key={item.id}
           hoverable
@@ -26,7 +17,7 @@ const Favorites: React.FC = () => {
         >
           <i
             onClick={() => {
-              setRemoveItem(item);
+              toggleFavorite(item);
             }}
             className={"fa-solid fa-heart"}
             style={{ cursor: "pointer" }}
