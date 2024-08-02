@@ -19,7 +19,7 @@ interface DataType {
   };
 }
 
-const Product: React.FC = () => {
+const Product = () => {
   const URL: string = "https://fakestoreapi.com/products";
   const [data, setData] = useState<DataType[]>([]);
   const [loading, setLoading] = useState<boolean>(true);

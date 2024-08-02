@@ -1,4 +1,4 @@
-import React, { createContext, useState, ReactNode } from "react";
+import React, { createContext, useState, ReactNode, useEffect } from "react";
 
 interface DataType {
   id: number;
@@ -29,7 +29,15 @@ export const FavoritesProvider: React.FC<{ children: ReactNode }> = ({
     const savedFavorites = localStorage.getItem("favorites");
     return savedFavorites ? JSON.parse(savedFavorites) : [];
   });
+  const [count, setCount] = useState(0);
+  useEffect(()=>{
+    setCount(()=>{
+        return favorites.length;
+    })
 
+  })
+  
+  
   const toggleFavorite = (item: DataType) => {
     setFavorites((prevFavorites) => {
       let newFavorites;
@@ -41,12 +49,13 @@ export const FavoritesProvider: React.FC<{ children: ReactNode }> = ({
         newFavorites = [...prevFavorites, item];
       }
       localStorage.setItem("favorites", JSON.stringify(newFavorites));
+
       return newFavorites;
     });
   };
 
   return (
-    <FavoritesContext.Provider value={{ favorites, toggleFavorite }}>
+    <FavoritesContext.Provider value={{ favorites, toggleFavorite ,count}}>
       {children}
     </FavoritesContext.Provider>
   );

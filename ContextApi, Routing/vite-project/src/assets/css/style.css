@@ -29,4 +29,17 @@
   position: absolute;
   top: 15px;
   right: 20px;
+}
+
+#AdminHeader {
+  display: flex;
+  background-color: red;
+  justify-content: center;
+}
+#AdminHeader ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  height: 80px;
 }/*# sourceMappingURL=style.css.map */

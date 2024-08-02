@@ -31,3 +31,15 @@
     }
   }
 }
+#AdminHeader {
+  display: flex;
+  background-color: red;
+  justify-content: center;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 80px;
+  }
+}

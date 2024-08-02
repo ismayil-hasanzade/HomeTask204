@@ -7,22 +7,17 @@ const Header = () => {
 
   return (
     <>
-      <nav id="Header">
+      <nav id="AdminHeader">
         <ul>
-          
           <li>
-            <NavLink to={"/"}>Home</NavLink>
+            <NavLink to={"/admin"}>Dashboard</NavLink>
+          </li>
+
+          <li>
+            <NavLink to={"product"}>Product</NavLink>
           </li>
           <li>
-            <NavLink to={'/contact'}>Contact</NavLink>
-          </li>
-          <li>
-            <NavLink to={"/product"}>Product</NavLink>
-          </li>
-          <li>
-            <NavLink to={"/favorites"}>
-              Favorites <sup>{count}</sup>{" "}
-            </NavLink>
+            <NavLink to={"add-product"}>Add Product</NavLink>
           </li>
         </ul>
       </nav>
