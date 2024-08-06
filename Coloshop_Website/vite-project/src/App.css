@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root {
+  width: 100%;
+
+  text-align: center;
+}
+#Header {
+  background-color: #027f8d;
+}
+#Header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  height: 80px;
+}
+li {
+  list-style: none;
+  font-size: 20px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  &:active {
+    color: red;
+  }
+}

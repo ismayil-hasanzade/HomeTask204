@@ -1,0 +1,33 @@
+#Footer {
+  
+  padding: 40px 0;
+  .container {
+    gap: 50px;
+    flex-direction: column;
+    font-size: 14px;
+    color: #51545f;
+    .topnav {
+      font-size: 14px;
+      color: #51545f;
+      display: flex;
+      justify-content: space-between;
+      ul {
+        display: flex;
+        gap: 25px;
+        li {
+          font-size: 14px;
+        }
+      }
+    }
+    .bottomnav {
+      display: flex;
+      justify-content: flex-start;
+      a {
+        color: #f74c50;
+      }
+      i {
+        color: #f74c50;
+      }
+    }
+  }
+}

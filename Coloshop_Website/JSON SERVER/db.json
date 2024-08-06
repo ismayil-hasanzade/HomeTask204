@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Fujifilm X100T 16 MP Digital Camera (Silver)",
+      "price": 520,
+      "image": "https://preview.colorlib.com/theme/coloshop/images/product_1.png.webp",
+      "category": "men",
+      "description": "ads"
+    },
+    {
+      "id": "3",
+      "title": "Blue Yeti USB Microphone Blackout Edition",
+      "price": 120,
+      "image": "https://preview.colorlib.com/theme/coloshop/images/product_3.png.webp",
+      "category": "women"
+    },
+    {
+      "id": "4",
+      "title": "DYMO LabelWriter 450 Turbo Thermal Label Printer",
+      "price": 410,
+      "image": "https://preview.colorlib.com/theme/coloshop/images/product_4.png.webp",
+      "category": "accessories"
+    },
+    {
+      "id": "5",
+      "title": "Pryma Headphones, Rose Gold & Grey",
+      "price": 180,
+      "image": "https://preview.colorlib.com/theme/coloshop/images/product_5.png.webp",
+      "category": "women"
+    },
+    {
+      "id": "6",
+      "title": "Blue Yeti USB Microphone Blackout Edition",
+      "price": 120,
+      "image": "https://preview.colorlib.com/theme/coloshop/images/product_3.png.webp",
+      "category": "women"
+    },
+    {
+      "id": "7",
+      "title": "DYMO LabelWriter 450 Turbo Thermal Label Printer",
+      "price": 410,
+      "image": "https://preview.colorlib.com/theme/coloshop/images/product_4.png.webp",
+      "category": "accessories"
+    },
+    {
+      "id": "8",
+      "title": "Pryma Headphones, Rose Gold & Grey",
+      "price": 180,
+      "image": "https://preview.colorlib.com/theme/coloshop/images/product_5.png.webp",
+      "category": "women"
+    }
+  ]
+}
